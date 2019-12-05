@@ -1,2 +1,2 @@
-# complex_continuous_wavelet_transform
-Complex Continuous Wavelet Transform
+# Complex Continuous Wavelet Transform
+Rust & WASM port of the C & Python library [CCWT](https://github.com/Lichtso/CCWT).
