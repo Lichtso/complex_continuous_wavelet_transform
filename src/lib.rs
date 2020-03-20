@@ -17,7 +17,7 @@ pub struct CCWT {
     input_freq_domain: Vec<Complex<f64>>,
     output_time_domain: Vec<Complex<f64>>,
     output_freq_domain: Vec<Complex<f64>>,
-    output_plan: std::sync::Arc<rustfft::FFT<f64>>
+    output_plan: std::sync::Arc<dyn rustfft::FFT<f64>>
 }
 
 #[wasm_bindgen]
