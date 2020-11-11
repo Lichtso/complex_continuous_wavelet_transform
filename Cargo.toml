@@ -1,6 +1,6 @@
 [package]
 name = "complex_continuous_wavelet_transform"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Alexander Meißner <AlexanderMeissner@gmx.net>"]
 description = "Complex Continuous Wavelet Transform"
 keywords = ["cwt", "wavelet"]
@@ -13,5 +13,11 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
-wasm-bindgen = "0.2.5"
-rustfft = "3.0.0"
+wasm-bindgen = "0.2.68"
+rustfft = "4.0.0"
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ["-O4"]
+
+[package.metadata.wasm-pack.profile.release.wasm-bindgen]
+dwarf-debug-info = false

@@ -5,7 +5,7 @@ cache: cargo
 before_script:
   if [[ $(cargo install --list | grep wasm-pack | wc -c) -eq 0 ]]; then cargo install wasm-pack; fi
 script:
-  wasm-pack build --release
+  wasm-pack build --target web --release
 before_deploy:
   mv pkg/complex_continuous_wavelet_transform_bg.wasm ccwt.wasm
 deploy:
